@@ -1,2 +1,2 @@
-# javascript-libraries
-In house developed javascript components
+# Baltmiore County JavaScript Components
+In house developed JavaScript components
