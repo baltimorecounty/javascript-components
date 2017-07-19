@@ -1,4 +1,4 @@
-# Baltmiore County JavaScript Components
+# Baltimore County JavaScript Components
 In house developed JavaScript components
 
 ## BcList
