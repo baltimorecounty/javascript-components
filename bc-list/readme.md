@@ -11,17 +11,38 @@ Intended to be a quick way to display a list of data, without worrying about mak
 * ```source``` - json data source
 * ```templatePath``` - path to the template used to display your data. *Note:* must be on the same domain as your app
 
+## Methods
+### Show
+After a new list is created, use the show message, to you know, show the list
+
+```javascript
+myList.Show(ajaxData, function() {
+  console.log('do something after you received the data via ajax');
+});
+```
+
 ## Usage
+
+### Html
+```html
+<body>
+<h1>My awesome page</h1>
+  <div class="target-container">
+    <!-->Results will be displayed here</!-->
+  </div>
+</body>
+```
+### JavaScript
 ```javascript
 
 //Initialize the List
-var adoptedPets = new BcList({
-    containerClass: "adoptable-pet-list", //Selector of class you want to append your results
-    source: "//egov.baltimorecountymd.gov/LostAdoptPetService/GetAdoptablePets",
-    templatePath: "/sebin/l/i/adoptable-pet.template.js"
+var myList = new BcList({
+    containerClass: "target-container", //Selector of class you want to append your results
+    source: "//egov.baltimorecountymd.gov/my-awesome-app/data",
+    templatePath: "/templates/my-awesome-app.template.js"
 });
 
-adoptedPets.Show(type, function() {
+myList.Show(ajaxData, function() {
   console.log('do something after you received the data via ajax');
 });
 
