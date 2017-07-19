@@ -16,11 +16,11 @@ Intended to be a quick way to display a list of data, without worrying about mak
 After a new list is created, use the show message, to you know, show the list
 
 ```javascript
-myList.Show(ajaxData, function() {
+myList.Show(null, function() {
   console.log('do something after you received the data via ajax');
 });
 ```
-
+*Note*: ```null``` param is specific to one app and needs to be refacatored. It is being used to allow the user to toggle between data types based on the url of the data call, which isn't always a requirement as seen in this [issue](https://github.com/baltimorecounty/javascript-components/issues/1)
 ## Usage
 
 ### Html
@@ -42,7 +42,7 @@ var myList = new BcList({
     templatePath: "/templates/my-awesome-app.template.js"
 });
 
-myList.Show(ajaxData, function() {
+myList.Show(null, function() {
   console.log('do something after you received the data via ajax');
 });
 
